@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{3d147ee8-724c-4256-9bc9-81a682200418}</ProjectGuid>
+    <RootNamespace>Combust</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;COMBUST_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;COMBUST_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>opengl32.lib
+;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;COMBUST_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>vendor/imgui;vendor/minhook;vendor/sdl;vendor/glad;vendor/KHR;JNI</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>vendor/minhook/libMinHook.x64.lib;vendor/sdl/SDL3.lib;JNI/jvm.lib;opengl32.lib;user32.lib;gdi32.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/NODEFAULTLIB:Bibliothek %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;COMBUST_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>vendor/imgui;vendor/minhook;vendor/glad;vendor/KHR;vendor/sdl;JNI;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>vendor/minhook/libMinHook.x64.lib;JNI;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="globals.cpp" />
+    <ClCompile Include="opengl_hook.cpp" />
+    <ClCompile Include="select_window.cpp" />
+    <ClCompile Include="vendor\imgui\imgui.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui_draw.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui_impl_opengl2.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="vendor\imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="vendor\imgui\imgui_tables.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui_widgets.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="vendor\glad\glad.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="globals.h" />
+    <ClInclude Include="JNI\classfile_constants.h" />
+    <ClInclude Include="JNI\jawt.h" />
+    <ClInclude Include="JNI\jawt_md.h" />
+    <ClInclude Include="JNI\jdwpTransport.h" />
+    <ClInclude Include="JNI\jni.h" />
+    <ClInclude Include="JNI\jni_md.h" />
+    <ClInclude Include="JNI\jvmti.h" />
+    <ClInclude Include="JNI\jvmticmlr.h" />
+    <ClInclude Include="opengl_hook.h" />
+    <ClInclude Include="select_window.h" />
+    <ClInclude Include="utils.h" />
+    <ClInclude Include="vendor\imgui\imconfig.h" />
+    <ClInclude Include="vendor\imgui\imgui.h" />
+    <ClInclude Include="vendor\imgui\imgui_impl_opengl2.h" />
+    <ClInclude Include="vendor\imgui\imgui_impl_opengl3.h" />
+    <ClInclude Include="vendor\imgui\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="vendor\imgui\imgui_impl_win32.h" />
+    <ClInclude Include="vendor\imgui\imgui_internal.h" />
+    <ClInclude Include="vendor\imgui\imstb_rectpack.h" />
+    <ClInclude Include="vendor\imgui\imstb_textedit.h" />
+    <ClInclude Include="vendor\imgui\imstb_truetype.h" />
+    <ClInclude Include="vendor\KHR\khrplatform.h" />
+    <ClInclude Include="vendor\minhook\MinHook.h" />
+    <ClInclude Include="vendor\glad\glad.h" />
+    <ClInclude Include="vendor\sdl\SDL.h" />
+    <ClInclude Include="vendor\sdl\SDL_assert.h" />
+    <ClInclude Include="vendor\sdl\SDL_asyncio.h" />
+    <ClInclude Include="vendor\sdl\SDL_atomic.h" />
+    <ClInclude Include="vendor\sdl\SDL_audio.h" />
+    <ClInclude Include="vendor\sdl\SDL_begin_code.h" />
+    <ClInclude Include="vendor\sdl\SDL_bits.h" />
+    <ClInclude Include="vendor\sdl\SDL_blendmode.h" />
+    <ClInclude Include="vendor\sdl\SDL_camera.h" />
+    <ClInclude Include="vendor\sdl\SDL_clipboard.h" />
+    <ClInclude Include="vendor\sdl\SDL_close_code.h" />
+    <ClInclude Include="vendor\sdl\SDL_copying.h" />
+    <ClInclude Include="vendor\sdl\SDL_cpuinfo.h" />
+    <ClInclude Include="vendor\sdl\SDL_dialog.h" />
+    <ClInclude Include="vendor\sdl\SDL_egl.h" />
+    <ClInclude Include="vendor\sdl\SDL_endian.h" />
+    <ClInclude Include="vendor\sdl\SDL_error.h" />
+    <ClInclude Include="vendor\sdl\SDL_events.h" />
+    <ClInclude Include="vendor\sdl\SDL_filesystem.h" />
+    <ClInclude Include="vendor\sdl\SDL_gamepad.h" />
+    <ClInclude Include="vendor\sdl\SDL_gpu.h" />
+    <ClInclude Include="vendor\sdl\SDL_guid.h" />
+    <ClInclude Include="vendor\sdl\SDL_haptic.h" />
+    <ClInclude Include="vendor\sdl\SDL_hidapi.h" />
+    <ClInclude Include="vendor\sdl\SDL_hints.h" />
+    <ClInclude Include="vendor\sdl\SDL_init.h" />
+    <ClInclude Include="vendor\sdl\SDL_intrin.h" />
+    <ClInclude Include="vendor\sdl\SDL_iostream.h" />
+    <ClInclude Include="vendor\sdl\SDL_joystick.h" />
+    <ClInclude Include="vendor\sdl\SDL_keyboard.h" />
+    <ClInclude Include="vendor\sdl\SDL_keycode.h" />
+    <ClInclude Include="vendor\sdl\SDL_loadso.h" />
+    <ClInclude Include="vendor\sdl\SDL_locale.h" />
+    <ClInclude Include="vendor\sdl\SDL_log.h" />
+    <ClInclude Include="vendor\sdl\SDL_main.h" />
+    <ClInclude Include="vendor\sdl\SDL_main_impl.h" />
+    <ClInclude Include="vendor\sdl\SDL_messagebox.h" />
+    <ClInclude Include="vendor\sdl\SDL_metal.h" />
+    <ClInclude Include="vendor\sdl\SDL_misc.h" />
+    <ClInclude Include="vendor\sdl\SDL_mouse.h" />
+    <ClInclude Include="vendor\sdl\SDL_mutex.h" />
+    <ClInclude Include="vendor\sdl\SDL_oldnames.h" />
+    <ClInclude Include="vendor\sdl\SDL_opengl.h" />
+    <ClInclude Include="vendor\sdl\SDL_opengles.h" />
+    <ClInclude Include="vendor\sdl\SDL_opengles2.h" />
+    <ClInclude Include="vendor\sdl\SDL_opengles2_gl2.h" />
+    <ClInclude Include="vendor\sdl\SDL_opengles2_gl2ext.h" />
+    <ClInclude Include="vendor\sdl\SDL_opengles2_gl2platform.h" />
+    <ClInclude Include="vendor\sdl\SDL_opengles2_khrplatform.h" />
+    <ClInclude Include="vendor\sdl\SDL_opengl_glext.h" />
+    <ClInclude Include="vendor\sdl\SDL_pen.h" />
+    <ClInclude Include="vendor\sdl\SDL_pixels.h" />
+    <ClInclude Include="vendor\sdl\SDL_platform.h" />
+    <ClInclude Include="vendor\sdl\SDL_platform_defines.h" />
+    <ClInclude Include="vendor\sdl\SDL_power.h" />
+    <ClInclude Include="vendor\sdl\SDL_process.h" />
+    <ClInclude Include="vendor\sdl\SDL_properties.h" />
+    <ClInclude Include="vendor\sdl\SDL_rect.h" />
+    <ClInclude Include="vendor\sdl\SDL_render.h" />
+    <ClInclude Include="vendor\sdl\SDL_revision.h" />
+    <ClInclude Include="vendor\sdl\SDL_scancode.h" />
+    <ClInclude Include="vendor\sdl\SDL_sensor.h" />
+    <ClInclude Include="vendor\sdl\SDL_stdinc.h" />
+    <ClInclude Include="vendor\sdl\SDL_storage.h" />
+    <ClInclude Include="vendor\sdl\SDL_surface.h" />
+    <ClInclude Include="vendor\sdl\SDL_system.h" />
+    <ClInclude Include="vendor\sdl\SDL_test.h" />
+    <ClInclude Include="vendor\sdl\SDL_test_assert.h" />
+    <ClInclude Include="vendor\sdl\SDL_test_common.h" />
+    <ClInclude Include="vendor\sdl\SDL_test_compare.h" />
+    <ClInclude Include="vendor\sdl\SDL_test_crc32.h" />
+    <ClInclude Include="vendor\sdl\SDL_test_font.h" />
+    <ClInclude Include="vendor\sdl\SDL_test_fuzzer.h" />
+    <ClInclude Include="vendor\sdl\SDL_test_harness.h" />
+    <ClInclude Include="vendor\sdl\SDL_test_log.h" />
+    <ClInclude Include="vendor\sdl\SDL_test_md5.h" />
+    <ClInclude Include="vendor\sdl\SDL_test_memory.h" />
+    <ClInclude Include="vendor\sdl\SDL_thread.h" />
+    <ClInclude Include="vendor\sdl\SDL_time.h" />
+    <ClInclude Include="vendor\sdl\SDL_timer.h" />
+    <ClInclude Include="vendor\sdl\SDL_touch.h" />
+    <ClInclude Include="vendor\sdl\SDL_tray.h" />
+    <ClInclude Include="vendor\sdl\SDL_version.h" />
+    <ClInclude Include="vendor\sdl\SDL_video.h" />
+    <ClInclude Include="vendor\sdl\SDL_vulkan.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="JNI\jvm.lib" />
+    <Library Include="vendor\minhook\libMinHook.x64.lib" />
+    <Library Include="vendor\sdl\SDL3.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="fonts\arial.ttf" />
+    <Font Include="fonts\arialbd.ttf" />
+    <Font Include="fonts\arialbi.ttf" />
+    <Font Include="fonts\ariali.ttf" />
+    <Font Include="fonts\ARIALN.TTF" />
+    <Font Include="fonts\ARIALNB.TTF" />
+    <Font Include="fonts\ARIALNBI.TTF" />
+    <Font Include="fonts\ARIALNI.TTF" />
+    <Font Include="fonts\ariblk.ttf" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
